@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="upload-div">
+        <div class="drop-zone">
+            <div class="icon-container">
+                <img src="img.svg" alt="File" class="center" draggable="false" />
+                <img src="img.svg" alt="File" class="left" draggable="false" />
+                <img src="img.svg" alt="File" class="right" draggable="false" />
+            </div>
+            <input type="file" id="fileBtn" />
+            <div class="title">Drop your file here or, <span id="browseBtn"> browse</span></div>
+        </div>
+        <div class="progress-container">
+            <div class="bg-progress"></div>
+            <div class="inner-container">
+                <div class="upload-title">Uploading...</div>
+                <div class="precent-container"><span id="precent">0</span>%</div>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="sharing-container">
+            <p class="expire">Link expires in 24 hrs</p>
+            <div class="input-container">
+                <input type="text" id="fileURL" readonly value="https://fonts.google.com/icons?selected=Material+Icons&icon.query=copy/icons?selected=Material+Icons&icon.query=copy">
+                <img id="copy-btn" src="./copy-icon.svg" alt="Copy">
+            </div>
+            <p>Or Send via Email</p>
+            <div class="email-container">
+                <form id="email-form">
+                    <div class="filed">
+                        <label for="sender">Your email</label>
+                        <input type="email" required name="from-email" id="sender">
+                    </div>
+                    <div class="filed">
+                        <label for="receiver">Receiver's email</label>
+                        <input type="email" required name="to-email" id="receiver">
+                    </div>
+                    <button type="submit" >
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="upload-vector"></div>
+    <div class="toast">Blah Blah</div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+body,html{
+    font-family: cursive;
+    background-color: #eff8fe;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+body{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+.upload-div{
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px #00002e6e;
+    justify-content: center;
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
+}
+.drop-zone{
+    min-height: 200px;
+    border: 2px dashed lightgray;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 200ms ;
+}
+.drop-zone:hover {
+    border-color:#0099ff ;
+}
+
+.dragged.drop-zone{
+    border-color:#0099ff ;
+}
+
+.icon-container{
+    display: flex;
+    position: relative;
+}
+.icon-container > img{
+    height: 100px;
+    width: 80px;
+    position: absolute;
+    left: 40%;
+    top: 20px;
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out;
+}
+
+.title{
+    position: absolute;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    font-weight: bolder;
+    left: 25%;
+}
+.title > span {
+    color:  rgb(0, 191, 255);
+    padding-left: 2px;
+    font-size: 18px;
+    display: inline;
+}
+.dragged  .icon-container .right {
+    transform: rotate(10deg) translate(20px) scale(0.9);
+    filter: grayscale(0.5);
+}
+.icon-container .center {
+    z-index: 2;
+}
+.dragged .icon-container .center {
+    z-index: 2;
+    transform: translateY(-10px);
+}
+.dragged .icon-container .left {
+    transform: rotate(-10deg) translate(-20px) scale(0.9);
+    filter: grayscale(0.5);
+}
+#fileBtn{
+    display: none;
+}
+.progress-container{
+    padding: 2px;
+    height: 70px;
+    border: 2px solid rgb(255 105 134);
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    display: none;
+}
+.bg-progress{
+    background: #d9f9f8;
+    width: 100%;
+    height: 95%;
+    border-radius: 18px;
+    border: 2px solid rgb(193, 255, 255);    
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform 0.25s linear ;
+}
+.progress-container .inner-container{
+    position: absolute;
+    margin: 10px 15px;
+    font-size: 15px;
+    width: 470px;
+}
+#precent{
+    color:rgb(255 105 134) ;
+    opacity: 0.8;
+    margin: 2px;
+}
+.progress-bar{
+    height: 3px;
+    width: 100%;
+    background:rgb(255 105 134) ;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform 0.25s linear ;
+}
+.sharing-container{
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+p{
+    opacity: 0.7;
+    text-align: center;
+}
+.input-container{
+    margin:0px;
+    border: 2px dashed lightgray;
+    border-radius: 5px;
+    align-items: center;
+    height: 30px;
+    display: flex;
+}
+.input-container > input{
+    border: none;
+    width: 100%;
+    padding: 5px;
+    height: 20px;
+    background-color: #eff8fe;
+    color: #00000096;
+}
+.input-container > input:focus,.email-container input:focus{
+    outline: none;
+}
+.input-container > img{
+    width: 20px;
+    height: 20px;
+    filter: opacity(0.8);
+    margin: 0px 8px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.email-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email-container form{
+    width: 100%;
+    border: 2px dashed lightgray;
+    padding: 15px;
+    border-radius:15px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email-container label{
+    font-size: 15px;
+}
+.filed{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    flex-direction: column;
+}
+.email-container input {
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid rgb(255 105 134);
+    text-align: center;
+    width: 100%;
+}
+.email-container button{
+    font-size: 15px;
+    padding: 8px 40px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:#fcb7c4fa;
+    cursor: pointer;
+    color: #4f4f4f;
+}
+.toast{
+    position: absolute;
+    bottom: 30px;
+    font-size: 15px;
+    left: 50%;
+    transform: translate(-50%,60px);
+    border-radius: 5px;
+    background-color: rgb(255 105 134);
+    color: #fff;
+    padding: 5px 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform ease-in-out 0.2s;
+}
+.upload-vector{
+    background: url(./upload-logo.svg) no-repeat center;
+    background-size: contain;
+    height: 50vh;
+    width: 50vw;
+}
